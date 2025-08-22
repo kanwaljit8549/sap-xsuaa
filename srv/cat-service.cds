@@ -8,27 +8,33 @@ service CarCatalog @(path: 'CatalogService')@(requires: [
     @restrict: [
         {
             grant: 'READ',
-            to   : 'Viewer'
+            to   : [
+                'Viewer',
+                'Admin'
+            ]
         },
         {
             grant: 'WRITE',
             to   : 'Admin'
         }
     ]
-
+    
     entity Company as projection on db.Company;
 
     @restrict: [
         {
             grant: 'READ',
-            to   : 'Viewer'
+            to   : [
+                'Viewer',
+                'Admin'
+            ]
         },
         {
             grant: 'WRITE',
             to   : 'Admin'
         }
     ]
-
+   
     entity Cars    as projection on db.Cars;
 
 
@@ -39,5 +45,6 @@ service CarCatalog @(path: 'CatalogService')@(requires: [
             'Admin'
         ]
     }]
+    
     entity Country as projection on db.Country;
 }

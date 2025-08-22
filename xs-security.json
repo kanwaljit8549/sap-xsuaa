@@ -1026,5 +1026,22 @@
       ],
       "attribute-references": []
     }
+  ],
+  "role-collections": [
+    {
+      "name": "CarCatalogAdmin",
+      "description": "Full access to Car Catalog",
+      "role-template-references": [
+        "Admin"
+      ]
+    },
+    {
+      "name": "CarCatalogViewer",
+      "description": "Read-only access to Car Catalog",
+      "role-template-references": [
+        "Viewer"
+      ]
+    }
   ]
+
 }

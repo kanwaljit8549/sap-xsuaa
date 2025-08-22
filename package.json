@@ -50,6 +50,9 @@
       "html5-runtime": true,
       "destinations": true,
       "workzone": true
+    },
+    "server": {
+      "index": true
     }
   }
 }
