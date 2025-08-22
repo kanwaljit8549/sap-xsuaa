@@ -24,10 +24,32 @@
   },
   "cds": {
     "requires": {
+      "db": "hana",
+      "[development]": {
+        "auth": {
+          "kind": "basic",
+          "users": {
+            "admin@gmail.com": {
+              "password": "admin",
+              "roles": [
+                "Admin"
+              ]
+            },
+            "viewer@gmail.com": {
+              "password": "viewer",
+              "roles": [
+                "Viewer"
+              ]
+            }
+          }
+        }
+      },
       "[production]": {
         "auth": "xsuaa"
       },
-      "html5-runtime": true
+      "html5-runtime": true,
+      "destinations": true,
+      "workzone": true
     }
   }
 }
